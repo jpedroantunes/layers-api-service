@@ -18,6 +18,7 @@ module LayersService
     def get_user_by_id(user_id)
       url = URI("#{@layers_routes.users_route}/#{user_id}")
       https = Net::HTTP.new(url.host, url.port)
+      https.use_ssl = true
       request = Net::HTTP::Get.new(url)
       request["community-id"] = @community_id
       request["Content-Type"] = "application/json"
