@@ -1,0 +1,4 @@
+class LayersResponse
+  attr_reader body: untyped
+  attr_reader status_code: int
+end

@@ -1,0 +1,26 @@
+module LayersService
+  VERSION: String
+
+  attr_accessor self.configuration: Configuration
+
+  def self.configure: -> Configuration
+
+  class ApiClient
+    @community_id: string
+    @layers_routes: LayersRoutes
+    @layers_app_token: (String | nil)
+    @main_header: untyped
+
+    def get_user_by_id: -> LayersResponse
+  end
+
+  class Configuration
+    @base_url: String
+    @layers_token: String
+
+    attr_reader base_url: String
+    attr_reader layers_token: String
+
+    def set_configuration: -> untyped
+  end
+end

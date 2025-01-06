@@ -1,0 +1,5 @@
+class LayersRoutes
+  @layers_base_url: string
+
+  def users_route: -> string
+end
